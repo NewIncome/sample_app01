@@ -3,6 +3,10 @@
 ## Direct Links
 - [Repo link](https://github.com/NewIncome/sample_app01)
 
+## The Model
+This is the first version of the Users model: 
+![model-image](./app/assets/images/UserModel_sampleApp01.png)
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
