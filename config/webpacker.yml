@@ -18,7 +18,7 @@ default: &default
   cache_manifest: false
 
   # Extract and emit a css file
-  extract_css: false
+  extract_css: true   # this is for the styesheets to be called via the asset pipeline
 
   static_assets_extensions:
     - .jpg

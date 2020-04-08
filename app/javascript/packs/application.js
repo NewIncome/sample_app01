@@ -18,6 +18,7 @@ require("channels")
 
 // line to import bootstrap
 import 'bootstrap'
+import 'stylesheets/application'
 
 // this is to test a tooltip button we used to validate bootstrap is working
 document.addEventListener("turbolinks:load", () => {

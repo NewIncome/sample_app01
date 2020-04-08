@@ -5,3 +5,5 @@
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%# This line call for the use of Webpacker %>
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'application' %>  <%# This line doesn't know where to look
+and needs an include to the file in the javascript/packs/application.js %>
