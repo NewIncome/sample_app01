@@ -1,3 +1,8 @@
 // Here we'll store all our css library imports for webpack to work accordingly.
 @import "~bootstrap/scss/bootstrap";
 @import "stylesheets/static_pages";
+
+/* I we need to add a bootstrap class custom way to an HTML element that
+is difficult to get like the .debug_dump we could do it ONLY in this file
+with the class you desire to add like @extend .container
+*/

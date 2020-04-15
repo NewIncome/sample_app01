@@ -23,4 +23,30 @@ import 'stylesheets/application'
 // this is to test a tooltip button we used to validate bootstrap is working
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
+  $('.btn').tooltip("option", {
+    selector: "button[type=button]",
+    animation: true,
+    delay: { "show": 500, "hide": 2000 },
+    placement: "top"
+  })
+
+  $('.btn').tooltip("option", {
+    selector: "a[href=#]",
+    animation: false,
+    boundary: 'viewport',
+    delay: { "shown": 100 },
+    placement: "right",
+    delay: 300,
+    placement: "left"
+  })
+
+  $('.btn').tooltip("option", {
+    selector: "a[href='\']",
+    show: null,
+    position: {
+      my: "left top",
+      at: "left bottom"
+    },
+    content: 'TOOLTIP CONTENTtt'
+  })
 })

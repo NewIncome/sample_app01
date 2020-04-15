@@ -3,6 +3,16 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 */
 
-h1 {  //test
-  color: rgb(1, 94, 131);
+h1 { color: rgb(1, 94, 131); }
+
+body { height: 100vh; }
+
+.debug-container {
+  margin-top: calc(100vh*0.12);
+  padding: 15px;
+  .debug_dump {
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 15px;
+  }
 }
