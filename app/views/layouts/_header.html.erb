@@ -5,14 +5,14 @@
       <li><%= link_to 'About', about_path, class: "btn btn-secondary" %></li>
       <li>
 
-        <div class="dropdown" data-toggle='tooltip' title='Your account links'>
+        <div class="dropdown" data-toggle='tooltip' data-placement="right" title='Your account links'>
           <%# face button to expand the dropdown %>
           <a class="btn btn-secondary dropdown-toggle" href="#" data-toggle="dropdown">
           Account
           </a>
           <div class="dropdown-menu">
             <%# dropdown menu links %>
-            <%= link_to  "Profile", '#', class: "dropdown-item" %>
+            <%= link_to  "Profile", user_path(1), class: "dropdown-item" %>
             <%= link_to  "Settings", '#', class: "dropdown-item" %>
             <%= link_to  "Logout", '#', class: "dropdown-item" %>
           </div>
