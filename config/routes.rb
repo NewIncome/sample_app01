@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/show'
+  get 'users/new'
+  get 'users/create'
   # get 'static_pages/home' # instead will use root
   # can also be done with, root to: 'static_pages#home'
   root 'static_pages#home'
