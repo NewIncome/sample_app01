@@ -1,2 +1,10 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% provide(:title, @user.name) %>
+<h1><%= @user.name %></h1>
+
+<% @user.attributes.each do |att| %>
+  <% unless att[0] == 'password_digest' %>
+    <%= "#{att[0]}: #{att[1]}" %>
+    <br/>
+  <% end %>
+<% end %>
+T.now: <%= Time.now %>
