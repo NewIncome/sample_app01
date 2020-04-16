@@ -1,6 +1,7 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
 
+<%= gravatar_for @user %>
 <% @user.attributes.each do |att| %>
   <% unless att[0] == 'password_digest' %>
     <%= "#{att[0]}: #{att[1]}" %>
