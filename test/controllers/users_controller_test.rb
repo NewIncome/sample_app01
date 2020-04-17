@@ -1,18 +1,20 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  test "should get show" do
-    get users_show_url
+  def setup
+    @user = User.create(name:    'testU1',
+                        email:   'testU1@mail.com',
+                        password:'testU1',
+                        password_confirmation: 'testU1')
+  end
+
+  test "should get show of created user" do
+    get user_url(@user.id)
     assert_response :success
   end
 
-  test "should get new" do
-    get users_new_url
-    assert_response :success
-  end
-
-  test "should get create" do
-    get users_create_url
+  test "should get signup" do
+    get signup_url
     assert_response :success
   end
 
