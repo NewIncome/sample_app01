@@ -4,6 +4,8 @@
 <%# Method to create or update the attributes of a model object %>
 <%= form_for @user do |f| %>
 
+  <%= render 'shared/user_errors' %>
+
   <%= f.label :name, "Name" %>
   <%= f.text_field :name, class:"form-control" %>
 
@@ -13,7 +15,7 @@
   <%= f.label :password, "Password" %>
   <%= f.password_field :password, class:"form-control" %>
 
-  <%= f.label :password_confirmation, "Password_confirmation" %>
+  <%= f.label :password_confirmation, "Confirmation" %>
   <%= f.password_field :password_confirmation, class:"form-control" %>
   
   <%= f.submit class:"btn btn-primary my-4 mx-auto d-block" %>
