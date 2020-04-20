@@ -7,4 +7,8 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}"
     image_tag(gravatar_url, alt:user.name, class: "gravatar d-block", size:100)
   end
+
+  def logged_in?
+    
+  end
 end

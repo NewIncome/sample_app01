@@ -17,6 +17,16 @@ class UsersController < ApplicationController
     end
   end
 
+  # Decided not to create a sessions controller and work the session through here.
+  def login
+    # @user = User.find_by(email: params[:user][:email])
+    # if @user && @user.authenticate(params[:user][:password])
+    #   render html: 'It worked!'
+    # else
+    #   render html: "It didn't work :("
+    # end
+  end
+
   private
 
   def user_params

@@ -1,0 +1,16 @@
+<% provide(:title, 'Login') %>
+
+<h1>Login</h1>
+
+<%= form_for 'User', url: login_path do |f| %>
+
+  <%= render 'shared/user_errors' %>
+  
+  <%= f.label :email, "Email" %>
+  <%= f.text_field :email, class: "form-control" %>
+
+  <%= f.label :password, "Password" %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.submit "Login", class: "btn btn-success my-4 mx-auto d-block" %>
+<% end %>

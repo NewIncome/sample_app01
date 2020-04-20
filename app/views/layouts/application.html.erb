@@ -12,9 +12,11 @@
 
     <div class="container">
       <%# Flash hash has keys and values %>
-      <div class="alert alert-<%= flash.keys[0] %>">
-        <%= flash[flash.keys[0]] unless flash.empty? %>
-      </div>
+      <% unless flash.empty? %>
+        <div class="alert alert-<%= flash.keys[0] %>">
+          <%= flash[flash.keys[0]]%>
+        </div>
+      <% end %>
 
       <%= yield %>
       <%= render 'layouts/footer' %>

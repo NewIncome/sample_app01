@@ -4,19 +4,22 @@
     <ul class="d-flex list-unstyled mb-0">
       <li><%= link_to 'About', about_path, class: "btn btn-secondary mr-2" %></li>
       <li>
-
-        <div class="dropdown" data-toggle='tooltip' data-placement="right" title='Your account links'>
-          <%# face button to expand the dropdown %>
-          <a class="btn btn-secondary dropdown-toggle" href="#" data-toggle="dropdown">
-          Account
-          </a>
-          <div class="dropdown-menu">
-            <%# dropdown menu links %>
-            <%= link_to  "Profile", user_path(1), class: "dropdown-item" %>
-            <%= link_to  "Settings", '#', class: "dropdown-item" %>
-            <%= link_to  "Logout", '#', class: "dropdown-item" %>
+        <% if logged_in? %>
+          <div class="dropdown" data-toggle='tooltip' data-placement="right" title='Your account links'>
+            <%# face button to expand the dropdown %>
+            <a class="btn btn-secondary dropdown-toggle" href="#" data-toggle="dropdown">
+            Account
+            </a>
+            <div class="dropdown-menu">
+              <%# dropdown menu links %>
+              <%= link_to  "Profile", user_path(1), class: "dropdown-item" %>
+              <%= link_to  "Settings", '#', class: "dropdown-item" %>
+              <%= link_to  "Logout", '#', class: "dropdown-item" %>
+            </div>
           </div>
-        </div>
+        <% else %>
+          <%= link_to 'Login', login_path, class: "btn btn-secondary" %>
+        <% end %>
 
       </li>
     </ul>
