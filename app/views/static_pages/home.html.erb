@@ -7,6 +7,8 @@
                            title='Tooltip on top'>
   Tooltip on top?
   </button>
-  <%= link_to  "Sign up", signup_path,
-      class: "btn btn-danger btn-lg d-block font-weight-bold mt-3 mx-auto w-50" %>
+  <% unless logged_in? %>
+    <%= link_to  "Sign up", signup_path,
+        class: "btn btn-danger btn-lg d-block font-weight-bold mt-3 mx-auto w-50" %>
+  <% end %>
 </div>

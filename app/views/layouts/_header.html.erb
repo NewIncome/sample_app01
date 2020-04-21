@@ -12,9 +12,9 @@
             </a>
             <div class="dropdown-menu">
               <%# dropdown menu links %>
-              <%= link_to  "Profile", user_path(1), class: "dropdown-item" %>
+              <%= link_to  "Profile", user_path(session[:user_id]), class: "dropdown-item" %>
               <%= link_to  "Settings", '#', class: "dropdown-item" %>
-              <%= link_to  "Logout", '#', class: "dropdown-item" %>
+              <%= link_to  "Logout", logout_path, method: :delete, class: "dropdown-item" %>
             </div>
           </div>
         <% else %>
