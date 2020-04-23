@@ -5,7 +5,7 @@ module SessionsHelper
   end
   
   def logged_in?
-    session[:user_id].nil? ? false : true
+    !current_user.nil?
   end
 
   # The following (4) methods are needed to be able to manipulate

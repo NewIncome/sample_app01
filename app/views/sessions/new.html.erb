@@ -12,5 +12,9 @@
   <%= f.label :password, "Password" %>
   <%= f.password_field :password, class: "form-control" %>
 
+  <%= f.check_box :remember_me %>
+  <%= f.label :remember_me, "Remember me on this computer", class: "ml-1" %>
+
   <%= f.submit "Login", class: "btn btn-success my-4 mx-auto d-block" %>
+  <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
 <% end %>

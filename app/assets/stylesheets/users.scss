@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@import 'bootstrap.css';
-
-form[action="/users"] {
+form[method="post"] {
   width: 60%;
   margin: auto;
 }
