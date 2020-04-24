@@ -2,9 +2,13 @@ class User < ApplicationRecord
   attr_accessor :remember_token # 6)to have r/w access to the remember_token
   before_save { self.email = email.downcase }
 
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
   validates :name, presence: true, length: { in: 6..25 }
-  validates :email, presence: true, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :email, presence: true, uniqueness: { case_sensitive: false },
+                      format: { with: VALID_EMAIL_REGEX }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  # allow_nil is to allow not inputting password when only editing i.e. user name/mail
 
   has_secure_password
 
