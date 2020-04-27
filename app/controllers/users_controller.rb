@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
+  before_action :logged_in_no, only: [:new]
 
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
@@ -62,6 +63,13 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find(params[:id])
     redirect_to(@user) unless @user == current_user
+  end
+
+  # to not access sign-up if logged_in
+  def logged_in_no
+    if logged_in?
+      redirect_to current_user
+    end
   end
 
 end
