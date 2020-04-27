@@ -17,6 +17,7 @@ gem 'bcrypt'              # Use Active Model has_secure_password
 gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'hirb'                # for better view tables in console
 gem 'faker'               # for better populate the db for test and view
+gem 'will_paginate'       # for pagination usage
 
 # gem 'redis', '~> 4.0'   # Use Redis adapter to run Action Cable in production
 # gem 'image_processing', '~> 1.2' # Use Active Storage variant
