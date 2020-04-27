@@ -1,3 +1,8 @@
 <% provide(:title, 'Settings') %>
 
+<div class="d-flex align-items-center flex-column">
+  <%= gravatar_for @user %>
+  <%= link_to 'change', url: "http://gravatar.com/emails" %>
+</div>
+
 <%= render 'form' %>
