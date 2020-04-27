@@ -1,0 +1,8 @@
+<% provide(:title, 'Users') %>
+
+<%= will_paginate %>
+  <ul class="list-group list-group-flush">
+    <%# looks for a partial named _user, to be rendered for each user %>
+    <%= render @users %>
+  </ul>
+<%= will_paginate %>

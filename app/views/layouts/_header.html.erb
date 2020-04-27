@@ -3,8 +3,9 @@
     <%= link_to 'Sample-App', root_path, class: "btn btn-secondary" %>
     <ul class="d-flex list-unstyled mb-0">
       <li><%= link_to 'About', about_path, class: "btn btn-secondary mr-2" %></li>
-      <li>
+      <li class="d-flex">
         <% if logged_in? %>
+          <%= link_to  "Users", users_path, class: "btn btn-secondary mr-2" %>
           <div class="dropdown" data-toggle='tooltip' data-placement="right" title='Your account links'>
             <%# face button to expand the dropdown %>
             <a class="btn btn-secondary dropdown-toggle" href="#" data-toggle="dropdown">
