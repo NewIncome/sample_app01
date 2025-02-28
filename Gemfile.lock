@@ -94,9 +94,9 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.24.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
-      nokogiri (>= 1.12.0)
+      nokogiri (>= 1.5.9)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
@@ -153,9 +153,8 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.6.2)
-      loofah (~> 2.21)
-      nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    rails-html-sanitizer (1.5.0)
+      loofah (~> 2.19, >= 2.19.1)
     railties (6.0.6.1)
       actionpack (= 6.0.6.1)
       activesupport (= 6.0.6.1)
@@ -240,6 +239,7 @@ DEPENDENCIES
   hirb
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
+  loofah (= 2.19.1)
   minitest
   minitest-reporters
   puma (~> 4.3)
